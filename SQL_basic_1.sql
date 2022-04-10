@@ -7,10 +7,10 @@ CREATE TABLE my_contacts
 (last_name VARCHAR(10),			--DataType VARCHAR used to hold info
 first_name VARCHAR(8),			--that's stored as text (upto 255 characters) & is of flexible length
 email VARCHAR(50),
-birthday DATE,					--to store Date
-gender CHAR(1),					--to store Character of fixed length
+birthday DATE,				--to store Date
+gender CHAR(1),				--to store Character of fixed length
 profession VARCHAR(10),
-status VARCHAR(10) NOT NULL,	-- Making sure that the value is always given
+status VARCHAR(10) NOT NULL,		-- Making sure that the value is always given
 interests VARCHAR(20),
 location VARCHAR(15) NOT NULL DEFAULT 'India',	-- not Null with deafult value if not overriden
 seeking VARCHAR(100)
