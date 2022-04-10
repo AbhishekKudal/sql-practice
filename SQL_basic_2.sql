@@ -58,4 +58,4 @@ SELECT date_name FROM black_book WHERE rating IN ('innovative', 'fabulous','deli
 SELECT date_name FROM black_book WHERE rating NOT IN ('innovative', 'fabulous','delightfull'...);
 	--Not can be used as: 
 SELECT drink_name FROM drink_info WHERE NOT calories BETWEEN 3 AND 5; --NOT goes right after WHERE
-SELECT date_name from black_book WHERE NOT date_name LIKE 'A%' AND NOT date_name LIKE 'B%'; -- Also it goes right after AND
+SELECT date_name FROM black_book WHERE NOT date_name LIKE 'A%' AND NOT date_name LIKE 'B%'; -- Also it goes right after AND
