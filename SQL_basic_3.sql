@@ -26,7 +26,7 @@ SELECT * FROM my_contacts;
 --DELETE 
 	--Here you can only delete entire row/rows & cannot delete a specific coloumn value or tableful of columns
 DELETE FROM my_contacts WHERE first_name = 'Ryan';	--All rows where first_name is Ryan will get deleted
-DELETE FROM my_contacts;	--It will delete EVERY ROW from the entire Table
+DELETE FROM my_contacts;				--It will delete EVERY ROW from the entire Table
 
 --UPDATE
 	--Here you can update single column or tableful of columns
