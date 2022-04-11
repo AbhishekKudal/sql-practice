@@ -84,21 +84,21 @@ PRIMARY KEY(id)
 
 INSERT INTO cookie_sales
 VALUES
-(1, 'Lindsay', 32.02, '2007-06-03'),
-(1, 'Paris', 26.53, '2007-06-03'),
-(1, 'Britney', 12.02, '2007-07-11'),
-(1, 'Lindsay', 54.52, '2007-06-03'),
-(1, 'Paris', 12.28, '2007-07-11'),
-(1, 'Britney', 71.03, '2007-06-03'),
-(1, 'Lindsay', 45.89, '2007-08-25'),
-(1, 'Paris	', 32, '2007-06-03'),
-(1, 'Britney', 3.25, '2007-08-25');
+('Lindsay', 32.02, '2007-06-03'),
+('Paris', 26.53, '2007-06-03'),
+('Britney', 12.02, '2007-07-11'),
+('Lindsay', 54.52, '2007-06-03'),
+('Paris', 12.28, '2007-07-11'),
+('Britney', 71.03, '2007-06-03'),
+('Lindsay', 45.89, '2007-08-25'),
+('Paris', 32, '2007-06-03'),
+('Britney', 3.25, '2007-08-25');
 
 --ARITHMETIC OPERATIONS
 
 --SELECT SUM
-SELECT SUM(sales) FROM cookie_sales WHERE first_name = 'Paris';						--To get SUM for an individual
-SELECT SUM(sales) FROM cookie_sales GROUP BY first_name;							-- To get SUM for all
+SELECT SUM(sales) FROM cookie_sales WHERE first_name = 'Paris';				--To get SUM for an individual
+SELECT SUM(sales) FROM cookie_sales GROUP BY first_name;				-- To get SUM for all
 SELECT SUM(sales) FROM cookie_sales GROUP BY first_name ORDER BY SUM(sales) DEC;	--To get SUM for All with descending order
 
 --SELECT AVG (Average)
