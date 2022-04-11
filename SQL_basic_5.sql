@@ -28,19 +28,22 @@ SELECT * FROM my_contacts;
 	--Adding a Primary Key
 ALTER TABLE my_contacts 
 ADD COLUMN contact_id INT NOT NULL AUTO_INCREMENT FIRST,	--Makes the new column the first one in the table
-ADD PRIMARY KEY (contact_id);								--you can only have one AUTO_INCREMENT field per table, it has to be an INTEGER data type and it can’t contain NULL.
+ADD PRIMARY KEY (contact_id);					--you can only have one AUTO_INCREMENT field per table, it has to be an INTEGER data type,
+								-- And can't be NULL
 	--Adding a new column something After
 ALTER TABLE my_contacts
-ADD COLUMN contact_number CHAR(10) AFTER email; -- NOTE: BEFORE and orders after FIRST won’t work with MySQL.
+ADD COLUMN contact_number CHAR(10) AFTER email; 		-- NOTE: BEFORE and orders after FIRST won’t work with MySQL.
 
 	--Altering existing table/columns
-ALTER TABLE	porjekts RENAME TO project_list;					--To rename the table name
+ALTER TABLE	porjekts RENAME TO project_list;		--To rename the table name
 ALTER TABLE project_list CHANGE COLUMN prev_name new_name INT	--To change name and DataType 
+
 /*	Note: If the data type you’re changing to isn’t compatible with the old data type,
 	your command won’t be carried out, and your SQL software will tell you that you have
 	an error in your statement.		*/
-ALTER TABLE project_list MODIFY COLUMN name VARCHAR(120);		--To change the DataType only	
-ALTER TABLE project_list DROP COLUMN start_date;				--To drop the unnecessary column
+	
+ALTER TABLE project_list MODIFY COLUMN name VARCHAR(120);	--To change the DataType only	
+ALTER TABLE project_list DROP COLUMN start_date;		--To drop the unnecessary column
 
 
 --STRING FUNCTIONS
@@ -48,16 +51,16 @@ ALTER TABLE project_list DROP COLUMN start_date;				--To drop the unnecessary co
 	--IMPORTANT: string functions do NOT change the data stored in your table; they simply return the altered strings as a result of your query.
 	
 	--RIGHT()/LEFT()
-SELECT RIGHT(location,2) FROM my_contacts;					--Select 2 characters from the right side of column location
+SELECT RIGHT(location,2) FROM my_contacts;			--Select 2 characters from the right side of column location
 SELECT SUBSTRING_INDEX(location, ',',1) FROM my_contacts	--SELECT everything in front of ',' (i.e. before first comma)
-SELECT SUBSTRING(location,2,5) FROM my_contacts				--SUBSTRING(your_string, start_position, length)
-SELECT UPPER(location) FROM my_contacts;					--UpperCase
-SELECT LOWER(location) FROM my_contacts;					--LowerCase
-SELECT REVERSE(location) FROM my_contacts;					--Reverses the Strings in the column
-SELECT LTRIM(location) FROM my_contacts;					--Removes extra spaces present in the left part of string
-SELECT RTRIM(location) FROM my_contacts;					--Removes extra spaces present in the right part of string
-SELECT LENGTH(location) FROM my_contacts;					--Returns Length of String (count of characters)
+SELECT SUBSTRING(location,2,5) FROM my_contacts			--SUBSTRING(your_string, start_position, length)
+SELECT UPPER(location) FROM my_contacts;			--UpperCase
+SELECT LOWER(location) FROM my_contacts;			--LowerCase
+SELECT REVERSE(location) FROM my_contacts;			--Reverses the Strings in the column
+SELECT LTRIM(location) FROM my_contacts;			--Removes extra spaces present in the left part of string
+SELECT RTRIM(location) FROM my_contacts;			--Removes extra spaces present in the right part of string
+SELECT LENGTH(location) FROM my_contacts;			--Returns Length of String (count of characters)
 
-UPDATE TABLE my_contacts SET state_name = RIGHT(location, 2);-- Updates all rows one by one with respective spitted strings in location column
+UPDATE TABLE my_contacts SET state_name = RIGHT(location, 2);	-- Updates all rows one by one with respective spitted strings in location column
 
 --We can use string functions in combination with SELECT, UPDATE and DELETE.
