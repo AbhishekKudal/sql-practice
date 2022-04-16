@@ -59,7 +59,7 @@ birthday DATE,
 gender CHAR(1) NOT NULL,
 interests VARCHAR(20),
 location VARCHAR(15) NOT NULL DEFAULT 'India',
-PRIMARY KEY(contact_id)			--Specifying the Primary Key
+PRIMARY KEY(contact_id)				--Specifying the Primary Key
 );
 
 INSERT INTO my_contacts (contact_id, first_name, last_name) VALUES (NULL, 'Marcia', 'Brady'); 
