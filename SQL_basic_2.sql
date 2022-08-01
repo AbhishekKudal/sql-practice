@@ -10,7 +10,7 @@ email VARCHAR(50),
 birthday DATE,					
 gender CHAR(1) NOT NULL,
 interests VARCHAR(20),
-location VARCHAR(15) NOT NULL DEFAULT 'India',
+location VARCHAR(15) NOT NULL DEFAULT 'Pune',
 );
 
 --Inserting Values
