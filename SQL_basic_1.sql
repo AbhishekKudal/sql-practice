@@ -12,7 +12,7 @@ gender CHAR(1),				--to store Character of fixed length
 profession VARCHAR(10),
 status VARCHAR(10) NOT NULL,		-- Making sure that the value is always given
 interests VARCHAR(20),
-location VARCHAR(15) NOT NULL DEFAULT 'India',	-- not Null with deafult value if not overriden
+location VARCHAR(15) NOT NULL DEFAULT 'Pune',	-- not Null with deafult value if not overriden
 seeking VARCHAR(100)
 );
 
