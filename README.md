@@ -1,2 +1,2 @@
 # sql-practice
-SQL Practice Problems
+SQL Basic Practice Problems
