@@ -29,9 +29,10 @@ DELETE FROM my_contacts WHERE first_name = 'Ryan';	--All rows where first_name i
 DELETE FROM my_contacts;				--It will delete EVERY ROW from the entire Table
 
 --UPDATE
-	--Here you can update single column or tableful of columns
+
+--Here you can update single column or tableful of columns
 UPDATE my_contacts SET interests = 'dancing' WHERE first_name = 'Jillian';				--to update single value
 UPDATE my_contacts SET DATE = '1998-02-08', location = 'SAN FRAN, CA' WHERE first_name = 'Jillian';	--to update multiple values
 
-	--We can perform basic math operations as well
+--We can perform basic math operations as well
 UPDATE drinks_info SET cost = cost +1 WHERE  drink_name = 'Blue Moon' OR drink_name = 'Lime Fizz';	
