@@ -1,4 +1,5 @@
 # sql-practice
+* [MarkDown Standard Practices](https://www.markdownguide.org/basic-syntax/)
 
 Function list:
 
